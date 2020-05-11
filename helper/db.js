@@ -5,7 +5,7 @@ module.exports=()=>{
     //mongoose.connect('mongodb+srv://yelisdurmus:yeliz1234@movie-api-nodejs-r1xkw.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true,useUnifiedTopology: true } );
     mongoose.connect('mongodb+srv://yelisdurmus:yeliz1234@movieapi-ke66e.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser: true,useUnifiedTopology: true } );
         mongoose.connection.on('open',()=>{
-        console.log('MongoDB: Connected');
+        //console.log('MongoDB: Connected');
     });
     mongoose.connection.on('err',(err)=>{
         console.log('MongoDB: Error', err);

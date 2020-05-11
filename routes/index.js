@@ -24,7 +24,7 @@ router.post('/register', (req, res, next)=> {
       res.json(data);
     }).catch((err)=>{
       res.json(err);
-    });
+    })
   });
 });
 router.post('/authenticate',(req,res)=>{
@@ -34,17 +34,18 @@ router.post('/authenticate',(req,res)=>{
   },(err,user)=>{
     if(err)
       throw err;
+
     if(!user){
       res.json({
         status:false,
         message:'Authentication failed, user not found.'
       });
     }else{
-      bcrypt.compare(password,user.password).then((result)=>{
-        if(!result){
+      bcrypt.compare(password, user.password).then((result) => {
+        if (!result){
           res.json({
-            status:false,
-            message:'Authentication failed, wrong password.'
+            status: false,
+            message: 'Authentication failed, wrong password.'
           });
         }else{
           const payload={
@@ -56,7 +57,7 @@ router.post('/authenticate',(req,res)=>{
           res.json({
             status:true,
             token
-          });
+          })
         }
       });
     }
