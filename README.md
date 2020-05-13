@@ -1,6 +1,6 @@
 # node-egitimi-movie-api
 movie api
-
+[! [Build status](https://travis-ci.com/yelisdurmus/nodejs-egitimi-movie-api.svg)](https://travis-ci.com/github/yelisdurmus/nodejs-egitimi-movie-api)
 # Movies
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
